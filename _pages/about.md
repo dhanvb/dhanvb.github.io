@@ -3,48 +3,48 @@ permalink: /about/
 title: "About"
 ---
 
-> ## SUMMARY:
+## SUMMARY:
 
->> Working currently as a DevOps Engineer, I bring over 15+ years of expertise in managing and optimizing large-scale IT infrastructures and >> implementing cutting-edge cloud solutions(Private and Public). My technical proficiency spans across various platforms and tools, >>enabling me to deliver robust, scalable, and secure environments tailored to meet the diverse needs of businesses.
+Working currently as a DevOps Engineer, I bring over 15+ years of expertise in managing and optimizing large-scale IT infrastructures and >> implementing cutting-edge cloud solutions(Private and Public). My technical proficiency spans across various platforms and tools, >>enabling me to deliver robust, scalable, and secure environments tailored to meet the diverse needs of businesses.
 
-> ## CAREER OBJECTIVE:
+## CAREER OBJECTIVE:
 
->> As an experienced DevOps and Cloud Engineer transitioning into a Full Stack Developer role, my objective is to combine my extensive >>background in IT infrastructure management, cloud solutions, and automation with my growing expertise in web and application development. >>I aim to leverage my skills in tools like Jenkins, Ansible, Docker, Kubernetes, Openshift, Terraform, alongside programming languages and >>frameworks such as Python, JavaScript, and React, to build robust, scalable, and efficient applications. I am passionate about continuous >>learning and eager to contribute to innovative projects where I can enhance both backend and frontend systems. My goal is to collaborate >>with dynamic teams to deliver end-to-end solutions that drive business success and user satisfaction, supporting my journey towards >>becoming a proficient Full Stack Developer.
+As an experienced DevOps and Cloud Engineer transitioning into a Full Stack Developer role, my objective is to combine my extensive background in IT infrastructure management, cloud solutions, and automation with my growing expertise in web and application development. I aim to leverage my skills in tools like Jenkins, Ansible, Docker, Kubernetes, Openshift, Terraform, alongside programming languages and frameworks such as Python, JavaScript, and React, to build robust, scalable, and efficient applications. I am passionate about continuous learning and eager to contribute to innovative projects where I can enhance both backend and frontend systems. My goal is to collaborate with dynamic teams to deliver end-to-end solutions that drive business success and user satisfaction, supporting my journey towards becoming a proficient Full Stack Developer.
 
-> ## Experience
+## Experience
 
->>**DevOps Engineer**
+**DevOps Engineer**
 
->>**Vision-Box · Full-time**
+**Vision-Box · Full-time**
 
->>**Jan 2023 - Present · 1 yr 11 mos**
->>**Dubai, United Arab Emirates · Hybrid**
+**Jan 2023 - Present · 1 yr 11 mos**
+**Dubai, United Arab Emirates · Hybrid**
 
->>• Working closely with development, QA, and operations teams to streamline processes and ensure seamless integration and deployment.
+• Working closely with development, QA, and operations teams to streamline processes and ensure seamless integration and deployment.
 
->>• Document processes, configurations, and best practices. Provide training and support to team members on DevOps tools and practices. 
+• Document processes, configurations, and best practices. Provide training and support to team members on DevOps tools and practices. 
 
->>• Optimize pipeline performance and troubleshoot any issues that arise during the build and deployment processes.
+• Optimize pipeline performance and troubleshoot any issues that arise during the build and deployment processes.
 
->>• Set up and manage AKS clusters to ensure efficient deployment and scaling of applications.
+• Set up and manage AKS clusters to ensure efficient deployment and scaling of applications.
 
->>• Utilize tools like Terraform, Ansible to automate the provisioning of infrastructure on Azure.
+• Utilize tools like Terraform, Ansible to automate the provisioning of infrastructure on Azure.
 
->>• Manage and optimize resource utilization in AKS to ensure cost-effective operations.
+• Manage and optimize resource utilization in AKS to ensure cost-effective operations.
 
->>• Implement and enforce security best practices for infrastructure and application deployments.
+• Implement and enforce security best practices for infrastructure and application deployments.
 
->>• Respond to and resolve incidents related to infrastructure and application performance. Implement root cause analysis and preventive measures.
+• Respond to and resolve incidents related to infrastructure and application performance. Implement root cause analysis and preventive measures.
 
->>• Develop and maintain disaster recovery plans to ensure business continuity.
+• Develop and maintain disaster recovery plans to ensure business continuity.
 
->>• Continuously evaluate and improve DevOps processes and tools. Stay updated with the latest industry trends and technologies.
+• Continuously evaluate and improve DevOps processes and tools. Stay updated with the latest industry trends and technologies.
 
->>• Monitor and manage cloud costs. Implement cost-saving measures without compromising performance and reliability.
+• Monitor and manage cloud costs. Implement cost-saving measures without compromising performance and reliability.
 
->>• Configure GitLab CI pipelines to build, test, and deploy mobile applications to AKS.
+• Configure GitLab CI pipelines to build, test, and deploy mobile applications to AKS.
 
->>**Skills:** Microsoft Azure · Microsoft SQL Server · Kubernetes · DevOps · System Administration · Troubleshooting · Unix · Linux System >>Administration · Docker · VMware Infrastructure · IT Infrastructure Operations · Terraform · Jenkins · Systems Design · Continuous >>Integration (CI) · Problem Solving · Architectural Design · Azure Kubernetes Service (AKS) · Build Automation · Domain Name System (DNS) · >>Docker Swarm · Linux · MLOps · High Availability (HA) · Gitlab CI · Ansible
+**Skills:** Microsoft Azure · Microsoft SQL Server · Kubernetes · DevOps · System Administration · Troubleshooting · Unix · Linux System Administration · Docker · VMware Infrastructure · IT Infrastructure Operations · Terraform · Jenkins · Systems Design · Continuous Integration (CI) · Problem Solving · Architectural Design · Azure Kubernetes Service (AKS) · Build Automation · Domain Name System (DNS) · Docker Swarm · Linux · MLOps · High Availability (HA) · Gitlab CI · Ansible
 
 ***
 
@@ -79,12 +79,16 @@ title: "About"
 
 **Skills:** Microsoft Azure · Kubernetes · VMware vSphere · DevOps · System Administration · Troubleshooting · Bash · Azure DevOps · Operating Systems · Unix · Git · Linux System Administration · Docker · Openshift · VMware Infrastructure · IT Infrastructure Operations · Red Hat Enterprise Linux (RHEL) · Terraform · Puppet (Software) · Maven · Jenkins · Continuous Integration (CI) · Elastic Stack (ELK) · Problem Solving · Python (Programming Language) · Gitlab · Red Hat Satellite · ITIL · Build Automation · Domain Name System (DNS) · Docker Swarm · Red Hat Linux · Capacity Planning · Linux · VMWare ESXi · High Availability (HA) · Ansible
 
-Technical Specialist
+***
 
-HCL Technologies · Full-time
-Jun 2019 - Nov 2021 · 2 yrs 6 mos
-Abu Dhabi Emirate, United Arab Emirates · On-site
-Client : Abu Dhabi Islamic Bank
+**Technical Specialist**
+
+**HCL Technologies · Full-time**
+
+**Jun 2019 - Nov 2021 · 2 yrs 6 mos**
+**Abu Dhabi Emirate, United Arab Emirates · On-site**
+
+**Client : Abu Dhabi Islamic Bank**
 
 
 • Handled operational tasks across a network of 800+ servers, encompassing change management, incident resolution, and fulfilling user requests. Proficiently handled provisioning of new servers, security patching, configuration management, and performance tuning initiatives. Additionally, managed user access and privileges utilizing PAM, ensuring robust security measures and compliance standards were upheld.
@@ -100,3 +104,4 @@ Client : Abu Dhabi Islamic Bank
 • Orchestrated end-to-end CI/CD pipeline with Jenkins for build automation, SonarQube for code analysis, Clair for container security scanning, Ansible for deployment automation, and managed container deployments on Red Hat OpenShift for scalability and reliability.
 
 • Successfully migrated virtual machines from an on-premises VMware infrastructure to Azure, ensuring minimal downtime and seamless integration with cloud services.
+
