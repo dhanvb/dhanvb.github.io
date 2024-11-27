@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Dhanveer Ahamed Abdul Raheem"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Full Stack Developer | DevOps Engineer | Cloud Engineer | Site Reliability Engineer"
+  bio    : "Full Stack Developer, DevOps Engineer, Cloud Engineer, Site Reliability Engineer"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
