@@ -4,7 +4,6 @@ main:
     description: "Blog Posts"
   - title: "Projects"
     url: /projects/
-    external: false
     description: "Real-Time Projects"
   - title: "Categories"
     url: /categories/
