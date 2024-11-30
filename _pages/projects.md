@@ -1,5 +1,5 @@
 ---
 title: "Projects"
-permalink: /projects/
+permalink: /posts/projects/
 taxonomy: projects
 ---

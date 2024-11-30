@@ -3,7 +3,7 @@ main:
     url: /posts/
     description: "Blog Posts"
   - title: "Projects"
-    url: /projects/
+    url: /posts/projects/
     description: "Real-Time Projects"
   - title: "Categories"
     url: /categories/
