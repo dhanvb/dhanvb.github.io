@@ -36,6 +36,7 @@ timezone: Asia/Dubai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zo
 include:
   - _pages
   - _posts
+  - _portfolio
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
