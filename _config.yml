@@ -108,8 +108,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-  # _projects
+  
+  # _portfolio
   - scope:
       path: ""
       type: portfolio
@@ -117,6 +117,11 @@ defaults:
       layout: single
       author_profile: false
       share: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
 
 category_archive:
   type: liquid
