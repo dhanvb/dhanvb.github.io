@@ -5,7 +5,7 @@ permalink: /about/
 
 ## SUMMARY:
 
-Working currently as a DevOps Engineer, I bring over 15+ years of expertise in managing and optimizing large-scale IT infrastructures and >> implementing cutting-edge cloud solutions(Private and Public). My technical proficiency spans across various platforms and tools, >>enabling me to deliver robust, scalable, and secure environments tailored to meet the diverse needs of businesses.
+Working currently as a DevOps Engineer, I bring over 15+ years of expertise in managing and optimizing large-scale IT infrastructures and  implementing cutting-edge cloud solutions(Private and Public). My technical proficiency spans across various platforms and tools, enabling me to deliver robust, scalable, and secure environments tailored to meet the diverse needs of businesses.
 
 ## CAREER OBJECTIVE:
 
