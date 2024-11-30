@@ -2,8 +2,9 @@ main:
   - title: "Posts"
     url: /posts/
     description: "Blog Posts"
-  - title: "Portfolio"
-    url: /portfolio/
+  - title: "Projects"
+    url: /projects/
+    external: false
     description: "Real-Time Projects"
   - title: "Categories"
     url: /categories/

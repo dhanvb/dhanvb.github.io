@@ -1,7 +1,8 @@
 ---
-title: "Post: Continuous Integration Using Jenkins, Nexus, SonarQube, Slack"
+title: "Continuous Integration Using Jenkins, Nexus, SonarQube, Slack"
+layout: post
 categories:
-  - portfolio
+  - projects
 tags:
   - Jenkins
   - Nexus
