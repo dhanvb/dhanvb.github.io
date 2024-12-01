@@ -1,6 +1,6 @@
 ---
 title: "Continuous Integration Using Jenkins, Nexus, SonarQube, Slack"
-layout: post
+layout: single
 categories:
   - projects
 tags:
@@ -10,18 +10,22 @@ tags:
   - Slack
 ---
 
-Benefits
-Short MTTR - Mean Time To Repair
-Fault Isolation 
-Agile
-No Human Intervention Required
+<h2>Benefits</h2>
+<ul>
+  <li><strong>Short MTTR</strong>: Mean Time To Repair</li>
+  <li><strong>Fault Isolation</strong></li>
+  <li><strong>Agile</strong></li>
+  <li><strong>No Human Intervention Required</strong></li>
+</ul>
 
-Tools used 
-Jenkins, GIT, Maven, Checkstyle, Slack, Sonatype Nexus, Sonarqube, AWS EC2
-Goals Achieved
-Fast TAT on Feature changes
-Less Disruptive
+<h2>Tools Used</h2>
+<p>Jenkins, GIT, Maven, Checkstyle, Slack, Sonatype Nexus, Sonarqube, AWS EC2</p>
 
-Workflow
-The below flowchart illustrates, how the code passes through every stage. 
+<h2>Goals Achieved</h2>
+<ul>
+  <li>Fast TAT on Feature Changes</li>
+  <li>Less Disruptive</li>
+</ul>
 
+<h2>Workflow</h2>
+<p>The below flowchart illustrates how the code passes through every stage.</p>
