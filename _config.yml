@@ -117,3 +117,17 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+  
+comments:
+  provider: "giscus"
+  giscus:
+    repo: "dhanvb/dhanvb.github.io"
+    repo_id: "R_kgDONXDvRQ"                         
+    category: "General"                  
+    category_id: "DIC_kwDONXDvRc4Ckzq8"                 
+    mapping: "pathname"                        
+    reactions_enabled: true                    
+    emit_metadata: false                       
+    input_position: "bottom"                   
+    theme: "light"                             
+    lang: "en"                                 
