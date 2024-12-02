@@ -32,7 +32,7 @@ tags:
 
 ![FlowDiagram](/assets/images/ci-jenkins/flow-diagram.png)
 
-<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;font-size:11.0pt;font-family:"Aptos",sans-serif;'><strong><u>Flow of Execution</u></strong></p>
+<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;font-size:18px;font-family:"Aptos",sans-serif;'><strong><u>Flow of Execution</u></strong></p>
 <div style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;font-size:15px;font-family:"Aptos",sans-serif;'>
     <ul style="list-style-type: disc;">
         <li>Login to AWS Account</li>
