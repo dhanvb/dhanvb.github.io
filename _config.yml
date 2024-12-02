@@ -125,7 +125,7 @@ comments:
     repo_id: "R_kgDONXDvRQ"                         
     category: "General"                  
     category_id: "DIC_kwDONXDvRc4Ckzq8"                 
-    mapping: "pathname"                        
+    mapping: "title"                        
     reactions_enabled: true                    
     emit_metadata: false                       
     input_position: "bottom"                   
