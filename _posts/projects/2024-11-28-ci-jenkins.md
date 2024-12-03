@@ -10,6 +10,8 @@ tags:
   - Slack
 ---
 
+Source Code to perform the below deployment is [sourcecode] (https://github.com/dhanvb/awsdevops/tree/ci-jenkins).
+
 <h2>Benefits</h2>
 <ul>
   <li><strong>Short MTTR</strong>: Mean Time To Repair</li>
