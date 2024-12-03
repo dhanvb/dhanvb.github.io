@@ -10,7 +10,7 @@ tags:
   - Slack
 ---
 
-Source Code to perform the below deployment is [sourcecode] (https://github.com/dhanvb/awsdevops/tree/ci-jenkins).
+Source Code to perform the below integration is in this [Link](https://github.com/dhanvb/awsdevops/tree/ci-jenkins).
 
 <h2>Benefits</h2>
 <ul>
