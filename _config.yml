@@ -124,10 +124,10 @@ comments:
     repo: "dhanvb/dhanvb.github.io"
     repo_id: "R_kgDONXDvRQ"                         
     category: "General"                  
-    category_id: "DIC_kwDONXDvRc4Ckzq8"                 
-    mapping: "title"                        
+    category_id: "DIC_kwDONXDvRc4Ckzq7"                 
+    mapping: "pathname"                        
     reactions_enabled: true                    
     emit_metadata: false                       
     input_position: "bottom"                   
-    theme: "dark"                             
+    theme: "light"                             
     lang: "en"                                 
