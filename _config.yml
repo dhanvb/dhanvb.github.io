@@ -129,5 +129,5 @@ comments:
     reactions_enabled: true                    
     emit_metadata: false                       
     input_position: "bottom"                   
-    theme: "light"                             
+    theme: "dark"                             
     lang: "en"                                 
