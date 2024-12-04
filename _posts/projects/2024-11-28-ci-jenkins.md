@@ -9,6 +9,9 @@ tags:
   - Nexus
   - Sonarqube
   - Slack
+  - AWS
+  - DevOps
+  - EC2
 ---
 
 Source Code to perform the below integration is in this [Link](https://github.com/dhanvb/awsdevops/tree/ci-jenkins).
