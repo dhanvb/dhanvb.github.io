@@ -18,7 +18,7 @@ tags:
 
 How do you ensure a zero-downtime deployment for multiple services in a production environment?
 
-**<ins>Resolution:**
+<ins>Resolution:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Achieving zero-downtime deployments requires careful use of rolling updates, readiness probes, and traffic routing. Here’s how you can implement it:
 
@@ -77,7 +77,7 @@ spec:
 
 How do you implement a blue-green deployment strategy with an easy rollback option?
 
-**<ins>Resolution:**
+<ins>Resolution:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a blue-green deployment, two identical environments (blue and green) are maintained. Traffic is shifted between them without downtime, allowing easy rollbacks.
 
@@ -122,14 +122,16 @@ spec:
 
 How do you autoscale pods based on custom application metrics, such as requests per second (RPS)?
 
-**<ins>Resolution:**
+<ins>Resolution:
 
 &nbsp;&nbsp;&nbsp;&nbsp;To autoscale based on custom metrics, integrate a custom metrics API (such as Prometheus Adapter) with the Horizontal Pod Autoscaler (HPA).
 
 1. **Expose Custom Metrics:** Use a monitoring tool like Prometheus to export custom metrics (e.g., RPS). Example metric:
+
 ```
 http_requests_total{job="myapp"}
 ```
+
 2. **Create a Custom Metrics API Adapter:** Deploy a custom metrics API adapter (e.g., k8s-prometheus-adapter). This adapter translates Prometheus metrics into a format Kubernetes understands.
 
 3. **Create an HPA for Custom Metrics:** Define an HPA to autoscale based on the custom RPS metric:
@@ -164,16 +166,15 @@ This setup ensures that Kubernetes scales the number of pods based on applicatio
 
 How do you manage workloads in multiple Kubernetes clusters efficiently?
 
-**<ins>Resolution:**
+<ins>Resolution:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Managing workloads across multiple clusters requires the use of **multi-cluster tools** such as **KubeFed** (Kubernetes Federation) or **Rancher**.
 
 1. **Install KubeFed:** Install KubeFed to manage multiple clusters as a single entity:
 
-<code>
+```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/kubefed/master/charts/kubefed/README.md
-
-</code>
+```
 
 2. **Federated Resources:** With KubeFed, you can create **federated deployments** that are automatically deployed to all member clusters:
 
@@ -207,7 +208,7 @@ spec:
 
 What happens when a node fails, and how do you recover pods on that node?
 
-**<ins>Resolution:**
+<ins>Resolution:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Kubernetes automatically reschedules pods on healthy nodes when a node becomes unavailable.
 
@@ -218,6 +219,7 @@ What happens when a node fails, and how do you recover pods on that node?
 ```
 kubectl edit no <node-name>
 ```
+
 Set grace period in the taint
 
 3. **Pod Disruption Budgets:** Use **PodDisruptionBudget (PDB)** to ensure that critical workloads maintain minimum availability during node failures:
@@ -233,4 +235,5 @@ spec:
     matchLabels:
     app: myapp
 ```
+
 ---
