@@ -18,7 +18,7 @@ tags:
 
 How do you ensure a zero-downtime deployment for multiple services in a production environment?
 
-<ins>Resolution:
+**<ins>Resolution:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Achieving zero-downtime deployments requires careful use of rolling updates, readiness probes, and traffic routing. Here’s how you can implement it:
 
@@ -77,7 +77,7 @@ spec:
 
 How do you implement a blue-green deployment strategy with an easy rollback option?
 
-<ins>Resolution:
+**<ins>Resolution:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a blue-green deployment, two identical environments (blue and green) are maintained. Traffic is shifted between them without downtime, allowing easy rollbacks.
 
@@ -122,7 +122,7 @@ spec:
 
 How do you autoscale pods based on custom application metrics, such as requests per second (RPS)?
 
-<ins>Resolution:
+**<ins>Resolution:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;To autoscale based on custom metrics, integrate a custom metrics API (such as Prometheus Adapter) with the Horizontal Pod Autoscaler (HPA).
 
@@ -164,7 +164,7 @@ This setup ensures that Kubernetes scales the number of pods based on applicatio
 
 How do you manage workloads in multiple Kubernetes clusters efficiently?
 
-<ins>Resolution:
+**<ins>Resolution:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Managing workloads across multiple clusters requires the use of **multi-cluster tools** such as **KubeFed** (Kubernetes Federation) or **Rancher**.
 
@@ -205,7 +205,7 @@ spec:
 
 What happens when a node fails, and how do you recover pods on that node?
 
-<ins>Resolution:
+**<ins>Resolution:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Kubernetes automatically reschedules pods on healthy nodes when a node becomes unavailable.
 
