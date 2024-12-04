@@ -169,10 +169,12 @@ How do you manage workloads in multiple Kubernetes clusters efficiently?
 &nbsp;&nbsp;&nbsp;&nbsp;Managing workloads across multiple clusters requires the use of **multi-cluster tools** such as **KubeFed** (Kubernetes Federation) or **Rancher**.
 
 1. **Install KubeFed:** Install KubeFed to manage multiple clusters as a single entity:
+
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/kubefed/master/charts/kubefed/README.md
 
 ```
+
 2. **Federated Resources:** With KubeFed, you can create **federated deployments** that are automatically deployed to all member clusters:
 
 ```
