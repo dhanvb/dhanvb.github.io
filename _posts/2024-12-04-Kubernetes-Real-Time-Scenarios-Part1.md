@@ -170,10 +170,10 @@ How do you manage workloads in multiple Kubernetes clusters efficiently?
 
 1. **Install KubeFed:** Install KubeFed to manage multiple clusters as a single entity:
 
-```
+<code>
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/kubefed/master/charts/kubefed/README.md
 
-```
+</code>
 
 2. **Federated Resources:** With KubeFed, you can create **federated deployments** that are automatically deployed to all member clusters:
 
@@ -214,6 +214,7 @@ What happens when a node fails, and how do you recover pods on that node?
 1. **Pod Eviction:** If a node fails, the **Node Controller** detects the failure after a default timeout of 5 minutes. Pods on the failed node are marked as "Terminating" or "Unknown," and Kubernetes attempts to reschedule them on a healthy node.
 
 2. **Node Termination Grace Period:** You can configure the node termination grace period to a lower value if you want faster eviction:
+
 ```
 kubectl edit no <node-name>
 ```
