@@ -47,6 +47,7 @@ readinessProbe:
     port: 8080
   initialDelaySeconds: 10
   periodSeconds: 5
+
 ```
 
 3. **Traffic Routing:** Use an Ingress or Istio Gateway to route traffic based on header/cookie values for canary testing:
@@ -95,6 +96,7 @@ spec:
       containers:
       - name: myapp-container
         image: myapp:v1
+
 ```
 
 2. **Update the Ingress:** Modify the Ingress (or Istio Gateway) to point to the green deployment when ready:
@@ -129,7 +131,9 @@ How do you autoscale pods based on custom application metrics, such as requests 
 1. **Expose Custom Metrics:** Use a monitoring tool like Prometheus to export custom metrics (e.g., RPS). Example metric:
 
 ```
+
 http_requests_total{job="myapp"}
+
 ```
 
 2. **Create a Custom Metrics API Adapter:** Deploy a custom metrics API adapter (e.g., k8s-prometheus-adapter). This adapter translates Prometheus metrics into a format Kubernetes understands.
@@ -156,6 +160,7 @@ spec:
       target:
         type: AverageValue
         averageValue: "100"
+
 ```
 
 This setup ensures that Kubernetes scales the number of pods based on application RPS.
@@ -173,10 +178,13 @@ How do you manage workloads in multiple Kubernetes clusters efficiently?
 1. **Install KubeFed:** Install KubeFed to manage multiple clusters as a single entity:
 
 ```
+
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/kubefed/master/charts/kubefed/README.md
+
 ```
 
 2. **Federated Resources:** With KubeFed, you can create **federated deployments** that are automatically deployed to all member clusters:
+
 
 ```
 apiVersion: types.kubefed.io/v1beta1
@@ -198,6 +206,7 @@ spec:
           containers:
           - name: myapp-container
             image: myapp:v1
+
 ```
 
 3. **Rancher for Multi-Cluster Management:** Alternatively, use **Rancher** to manage clusters through a centralized dashboard. Rancher integrates with CI/CD tools and provides RBAC controls across multiple clusters.
@@ -217,14 +226,18 @@ What happens when a node fails, and how do you recover pods on that node?
 2. **Node Termination Grace Period:** You can configure the node termination grace period to a lower value if you want faster eviction:
 
 ```
+
 kubectl edit no <node-name>
+
 ```
 
 Set grace period in the taint
 
 3. **Pod Disruption Budgets:** Use **PodDisruptionBudget (PDB)** to ensure that critical workloads maintain minimum availability during node failures:
 
+
 ```
+
 apiVersion: policy/v1beta1
 kind: PodDisruptionBudget
 metadata:
@@ -234,6 +247,7 @@ spec:
   selector:
     matchLabels:
     app: myapp
+    
 ```
 
 ---
