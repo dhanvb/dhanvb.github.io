@@ -22,7 +22,7 @@ How do you ensure a zero-downtime deployment for multiple services in a producti
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Achieving zero-downtime deployments requires careful use of rolling updates, readiness probes, and traffic routing. Here’s how you can implement it:
 
-1. **Rolling Update:** Use rolling updates with a small increment in replicas to ensure that only a portion of the pods are updated at a time, reducing the risk of downtime:
+**Rolling Update:** Use rolling updates with a small increment in replicas to ensure that only a portion of the pods are updated at a time, reducing the risk of downtime:
 
 ```
 apiVersion: apps/v1 
@@ -38,7 +38,7 @@ spec:
       maxSurge: 1
 ```
 
-2. **Readiness Probes:** Define readiness probes to ensure that the new pod version is ready to serve traffic before it’s added to the load balancer:
+**Readiness Probes:** Define readiness probes to ensure that the new pod version is ready to serve traffic before it’s added to the load balancer:
 
 ```
 readinessProbe:
@@ -50,7 +50,7 @@ readinessProbe:
 
 ```
 
-3. **Traffic Routing:** Use an Ingress or Istio Gateway to route traffic based on header/cookie values for canary testing:
+**Traffic Routing:** Use an Ingress or Istio Gateway to route traffic based on header/cookie values for canary testing:
 
 ```
 apiVersion: networking.istio.io/v1alpha3
@@ -82,7 +82,7 @@ How do you implement a blue-green deployment strategy with an easy rollback opti
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In a blue-green deployment, two identical environments (blue and green) are maintained. Traffic is shifted between them without downtime, allowing easy rollbacks.
 
-1. **Create Two Deployments (blue and green):** Define two separate deployments for the blue and green environments.
+**Create Two Deployments (blue and green):** Define two separate deployments for the blue and green environments.
 
 ```
 apiVersion: apps/v1
@@ -99,7 +99,7 @@ spec:
 
 ```
 
-2. **Update the Ingress:** Modify the Ingress (or Istio Gateway) to point to the green deployment when ready:
+**Update the Ingress:** Modify the Ingress (or Istio Gateway) to point to the green deployment when ready:
 
 ```
 apiVersion: networking.k8s.io/v1
@@ -116,7 +116,7 @@ spec:
           servicePort: 80
 ```
 
-3. **Rolling Back:** If the green deployment has issues, switch back to blue by modifying the Ingress to point to myapp-blue again. This ensures that users always hit a stable environment.
+**Rolling Back:** If the green deployment has issues, switch back to blue by modifying the Ingress to point to myapp-blue again. This ensures that users always hit a stable environment.
 
 ---
 
@@ -128,7 +128,7 @@ How do you autoscale pods based on custom application metrics, such as requests 
 
 &nbsp;&nbsp;&nbsp;&nbsp;To autoscale based on custom metrics, integrate a custom metrics API (such as Prometheus Adapter) with the Horizontal Pod Autoscaler (HPA).
 
-1. **Expose Custom Metrics:** Use a monitoring tool like Prometheus to export custom metrics (e.g., RPS). Example metric:
+**Expose Custom Metrics:** Use a monitoring tool like Prometheus to export custom metrics (e.g., RPS). Example metric:
 
 ```
 
@@ -136,9 +136,9 @@ http_requests_total{job="myapp"}
 
 ```
 
-2. **Create a Custom Metrics API Adapter:** Deploy a custom metrics API adapter (e.g., k8s-prometheus-adapter). This adapter translates Prometheus metrics into a format Kubernetes understands.
+**Create a Custom Metrics API Adapter:** Deploy a custom metrics API adapter (e.g., k8s-prometheus-adapter). This adapter translates Prometheus metrics into a format Kubernetes understands.
 
-3. **Create an HPA for Custom Metrics:** Define an HPA to autoscale based on the custom RPS metric:
+**Create an HPA for Custom Metrics:** Define an HPA to autoscale based on the custom RPS metric:
 
 ```
 apiVersion: autoscaling/v2beta2
@@ -175,7 +175,7 @@ How do you manage workloads in multiple Kubernetes clusters efficiently?
 
 &nbsp;&nbsp;&nbsp;&nbsp;Managing workloads across multiple clusters requires the use of **multi-cluster tools** such as **KubeFed** (Kubernetes Federation) or **Rancher**.
 
-1. **Install KubeFed:** Install KubeFed to manage multiple clusters as a single entity:
+**Install KubeFed:** Install KubeFed to manage multiple clusters as a single entity:
 
 ```
 
@@ -183,7 +183,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/kubefed/maste
 
 ```
 
-2. **Federated Resources:** With KubeFed, you can create **federated deployments** that are automatically deployed to all member clusters:
+**Federated Resources:** With KubeFed, you can create **federated deployments** that are automatically deployed to all member clusters:
 
 
 ```
@@ -209,7 +209,7 @@ spec:
 
 ```
 
-3. **Rancher for Multi-Cluster Management:** Alternatively, use **Rancher** to manage clusters through a centralized dashboard. Rancher integrates with CI/CD tools and provides RBAC controls across multiple clusters.
+**Rancher for Multi-Cluster Management:** Alternatively, use **Rancher** to manage clusters through a centralized dashboard. Rancher integrates with CI/CD tools and provides RBAC controls across multiple clusters.
 
 ---
 
@@ -221,9 +221,9 @@ What happens when a node fails, and how do you recover pods on that node?
 
 &nbsp;&nbsp;&nbsp;&nbsp;Kubernetes automatically reschedules pods on healthy nodes when a node becomes unavailable.
 
-1. **Pod Eviction:** If a node fails, the **Node Controller** detects the failure after a default timeout of 5 minutes. Pods on the failed node are marked as "Terminating" or "Unknown," and Kubernetes attempts to reschedule them on a healthy node.
+**Pod Eviction:** If a node fails, the **Node Controller** detects the failure after a default timeout of 5 minutes. Pods on the failed node are marked as "Terminating" or "Unknown," and Kubernetes attempts to reschedule them on a healthy node.
 
-2. **Node Termination Grace Period:** You can configure the node termination grace period to a lower value if you want faster eviction:
+**Node Termination Grace Period:** You can configure the node termination grace period to a lower value if you want faster eviction:
 
 ```
 
@@ -233,7 +233,7 @@ kubectl edit no <node-name>
 
 Set grace period in the taint
 
-3. **Pod Disruption Budgets:** Use **PodDisruptionBudget (PDB)** to ensure that critical workloads maintain minimum availability during node failures:
+**Pod Disruption Budgets:** Use **PodDisruptionBudget (PDB)** to ensure that critical workloads maintain minimum availability during node failures:
 
 
 ```
@@ -247,7 +247,7 @@ spec:
   selector:
     matchLabels:
     app: myapp
-    
+
 ```
 
 ---
