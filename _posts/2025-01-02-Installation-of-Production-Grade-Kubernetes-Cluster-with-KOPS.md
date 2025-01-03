@@ -5,8 +5,8 @@ comments: true
 categories:
   - posts
 tags:
-  - K8S
-  - DevOps
+  - Kubernetes
+  - Provisioning
   - AWS S3
   - AWS IAM
   - KOPS
