@@ -5,7 +5,7 @@ permalink: /about/
 
 ## SUMMARY:
 
-Working currently as a DevOps Engineer, I bring over 15+ years of expertise in managing and optimizing large-scale IT infrastructures and  implementing cutting-edge cloud solutions(Private and Public). My technical proficiency spans across various platforms and tools, enabling me to deliver robust, scalable, and secure environments tailored to meet the diverse needs of businesses.
+Working currently as a DevOps Engineer, I bring over 17+ years of expertise in managing and optimizing large-scale IT infrastructures and  implementing cutting-edge cloud solutions(Private and Public). My technical proficiency spans across various platforms and tools, enabling me to deliver robust, scalable, and secure environments tailored to meet the diverse needs of businesses.
 
 ## CAREER OBJECTIVE:
 
@@ -15,9 +15,9 @@ As an experienced DevOps and Cloud Engineer transitioning into a Full Stack Deve
 
 **DevOps Engineer**
 
-**Vision-Box · Full-time**
+**Amadeus (Previously Vision-Box) · Full-time**
 
-**Jan 2023 - Present · 1 yr 11 mos**
+**Jan 2023 - Present · 3 yr 2 mos**
 **Dubai, United Arab Emirates · Hybrid**
 
 • Working closely with development, QA, and operations teams to streamline processes and ensure seamless integration and deployment.
