@@ -1,29 +1,61 @@
 ---
-title: "Jenkins Pipeline Reliability: Retry + Deterministic Failures + API-Driven Job Provisioning"
-date: 2026-03-03
-categories: [devops, jenkins, cicd]
-tags: [jenkins, pipeline, retry, automation, curl, csurf, devops]
+title: "Jenkins Retry Pipeline: Deterministic Retries + API-Driven Job Provisioning"
+date: 2026-03-05
+categories: [DevOps, Jenkins, CI/CD]
+tags: [jenkins, pipeline, retry, curl, automation, api, csrf]
 ---
 
-## What problem this solves
+## Overview
 
-In real CI/CD systems, tests sometimes fail for reasons unrelated to code changes: timing issues, network flakiness, unstable dependencies, etc.
-A common operational pattern is **bounded retries** on the test stage, paired with solid logging so failures remain visible and debuggable.
+This scenario demonstrates a practical Jenkins reliability pattern: **retrying a flaky test stage** in a controlled way, while also provisioning and triggering the pipeline job **entirely via CLI and Jenkins API** (no UI clicking).
 
-This project demonstrates:
-- A Jenkins pipeline with `retry(3)` on the **Test** stage
-- A **deterministic** simulated failure (fails twice, succeeds on the third attempt)
-- Automated provisioning: **create/update the Jenkins job via API** (no UI clicking)
-- Automated log collection into `pipeline-output.log`
+What this covers:
+
+- Jenkins installation on Ubuntu (scripted)
+- Pipeline with stages: **Build → Test (retry 3x) → Deploy**
+- Deterministic simulated failure to prove `retry(3)` works (fails twice, succeeds on the third attempt)
+- Post-build status logging (`always`, `success`, `failure`)
+- Job creation/update via Jenkins API with **CSRF crumb** handling
+- Console log export to `pipeline-output.log`
 
 ---
 
-## What I built
+## Why this matters in real CI/CD
 
-### Pipeline stages
-- **Build**: prints `Building the application ...`
-- **Test**: prints `Testing the application ...`, retries up to 3 times, and prints `Simulated test failure` before retrying
-- **Deploy**: prints `Deploying the application ...` only after Test eventually passes
+Retries are not a permanent fix, but they are a valid operational tool when:
+
+- tests occasionally fail due to transient dependency/network issues
+- you need bounded resilience while you investigate flakiness
+- you want predictable behavior and consistent post-build signals
+
+The key is to keep retries **bounded**, **observable**, and **auditable**.
+
+---
+
+## Environment
+
+- Ubuntu machine
+- Working directory: `/home/ubuntu/code`
+- Jenkins installed via provided script: `jenkins_setup.sh`
+- After installation, admin password stored at: `/home/ubuntu/code/jenkins_admin_password`
+- Jenkins URL: `http://localhost:8080`
+
+> If a Jenkins installation fails due to a GPG key error, follow the troubleshooting steps in the lab `README.md`.
+
+---
+
+## Pipeline Requirements
+
+### Stages
+1. **Build**
+   - Prints: `Building the application ...`
+2. **Test**
+   - Prints: `Testing the application ...`
+   - Retries the stage up to **3 times** on failure
+   - Prints error message **before** retrying: `Simulated test failure`
+3. **Deploy**
+   - Prints: `Deploying the application ...`
+   - Runs only if the pipeline reaches this stage (tests pass eventually)
 
 ### Post-build actions
 - Always: `Pipeline Execution Completed.`
@@ -32,31 +64,54 @@ This project demonstrates:
 
 ---
 
-## Why deterministic failure matters
+## Jenkinsfile (Pipeline logic)
 
-If you simulate “random failure”, you cannot reliably prove your retry logic works.
-Instead, this pipeline writes a counter file (`.test_attempt`) and fails until attempt #3.
-That makes the behavior testable and repeatable.
+The pipeline uses `retry(3)` to rerun the Test stage if it fails.  
+To make retry behavior deterministic (not random), it writes a `.test_attempt` file in the workspace and fails until attempt #3.
 
----
+```groovy
+pipeline {
+  agent any
 
-## Automation: Jenkins job provisioning via API
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building the application ... '
+      }
+    }
 
-This workflow uses:
-- Jenkins **crumb issuer** endpoint (CSRF-safe job creation/build triggers)
-- Job creation/update using a Pipeline job XML config
-- Build trigger via API
-- Console log collection via API (saved into `pipeline-output.log`)
+    stage('Test') {
+      steps {
+        retry(3) {
+          echo 'Testing the application ... '
+          script {
+            def f = '.test_attempt'
+            def n = 0
+            if (fileExists(f)) {
+              n = readFile(f).trim().toInteger()
+            }
+            n = n + 1
+            writeFile(file: f, text: "${n}\n")
 
-This is closer to real CI bootstrapping than manually clicking through the Jenkins UI.
+            if (n < 3) {
+              echo 'Simulated test failure'
+              error('Simulated test failure')
+            }
+          }
+        }
+      }
+    }
 
----
+    stage('Deploy') {
+      steps {
+        echo 'Deploying the application ... '
+      }
+    }
+  }
 
-## How to run (lab setup)
-
-From the working directory:
-
-```bash
-cd /home/ubuntu/code
-bash jenkins_setup.sh
-bash scripts/run_all.sh
+  post {
+    always  { echo 'Pipeline Execution Completed.' }
+    success { echo 'Pipeline Successful.' }
+    failure { echo 'Pipeline Failed.' }
+  }
+}
