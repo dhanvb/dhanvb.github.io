@@ -116,3 +116,5 @@ pipeline {
   }
 }
 ```
+
+Full Github Repo - `https://github.com/dhanvb/devops-scenarios/tree/main/scenarios/jenkins/001-retry-pipeline`
