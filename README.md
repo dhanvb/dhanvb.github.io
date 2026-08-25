@@ -1,27 +1,74 @@
-# Minimal Mistakes remote theme starter
+# Dhanveer Ahamed - Technical Portfolio
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+This repository powers my GitHub Pages technical portfolio.
 
-Contains basic configuration to get you a site with:
+The site contains practical infrastructure, DevOps, platform engineering, and reliability-focused articles and project write-ups based on hands-on implementation work.
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## Portfolio Focus
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+My work is focused on production-minded infrastructure and platform engineering, including:
 
----
+- Linux systems administration
+- Kubernetes operations
+- CI/CD workflows
+- Infrastructure automation
+- Configuration management
+- Ansible and Terraform
+- Observability and troubleshooting
+- Migration and recovery planning
+- AI-assisted operations and incident review
 
-## Troubleshooting
+## Current Positioning
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+I am an infrastructure and platform engineer focused on building, operating, documenting, and improving reliable systems.
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+My goal is to show practical engineering judgment through real implementation work, not just tool installation tutorials.
+
+## Content Structure
+
+The site is organized into:
+
+- **Posts**: technical articles, implementation notes, and operational write-ups
+- **Projects**: portfolio projects and case studies
+- **Categories**: grouped technical topics
+- **Tags**: technology-specific indexing
+- **About**: professional background and experience summary
+
+## Featured Work
+
+### CI/CD Configuration Governance with Ansible Validation Gates
+
+A production-style reference implementation for version-controlled configuration deployment, validation gates, failure evidence, and AI-assisted change review.
+
+Repository:
+
+https://github.com/dhanvb/cicd-configuration-governance-lab
+
+This project demonstrates:
+
+- Git-backed configuration management
+- Ansible-based deployment
+- validation gates
+- failure simulation
+- evidence logging
+- AI-assisted configuration review direction
+- human approval boundaries for production changes
+
+## Site Technology
+
+This portfolio is built using:
+
+- GitHub Pages
+- Jekyll
+- Minimal Mistakes theme
+- Markdown
+
+## Author
+
+**Dhanveer Ahamed**
+
+Infrastructure & Platform Engineer focused on Kubernetes, Linux, automation, reliability, migration, and AI-assisted operations.
+
+- GitHub: https://github.com/dhanvb
+- Portfolio: https://dhanvb.github.io
+- LinkedIn: https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/
