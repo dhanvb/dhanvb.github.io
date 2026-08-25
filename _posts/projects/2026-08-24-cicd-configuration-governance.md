@@ -43,16 +43,41 @@ A deployment pipeline can succeed technically while deploying the wrong configur
 This project shows how to prevent that by validating the deployed configuration before accepting the deployment as successful.
 
 ---
-
 ## Control Pattern
 
-```text
-Configuration source
-        ↓
-Deployment automation
-        ↓
-Validation gate
-        ↓
-Evidence log
-        ↓
-Accepted or rejected deployment
+The workflow follows a simple control model:
+
+1. **Configuration source**  
+   The approved application configuration is stored in Git.
+
+2. **Deployment automation**  
+   Ansible copies the configuration to the target system.
+
+3. **Validation gate**  
+   A separate Ansible playbook reads the deployed configuration and compares it with the approved version.
+
+4. **Evidence log**  
+   The workflow records whether the deployment passed or failed validation.
+
+5. **Deployment decision**  
+   The deployment is accepted only when the deployed configuration matches the approved version.
+
+### Flow
+
+| Stage | Purpose | Result |
+|---|---|---|
+| Configuration source | Store approved config in Git | Known desired state |
+| Deployment automation | Copy config to target system | Config deployed |
+| Validation gate | Compare deployed version with approved version | Pass or fail |
+| Evidence log | Capture operational proof | Audit trail |
+| Deployment decision | Accept or reject deployment | Controlled release |
+
+### Why This Matters
+
+A deployment should not be trusted only because the automation completed successfully.
+
+The important question is:
+
+> Did the target system receive the approved configuration?
+
+This project answers that question through validation and evidence.
