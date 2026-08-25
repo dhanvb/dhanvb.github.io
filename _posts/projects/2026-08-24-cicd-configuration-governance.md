@@ -1,6 +1,10 @@
 ---
 title: "CI/CD Configuration Governance with Ansible Validation Gates"
 date: 2026-08-24
+layout: single
+classes: wide
+author_profile: false
+comments: true
 categories:
   - projects
 tags:
