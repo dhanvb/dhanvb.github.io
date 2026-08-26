@@ -74,3 +74,4 @@ Validation playbook checks approved version
 Deployment accepted or rejected
         ↓
 Evidence logs captured
+```text
