@@ -5,6 +5,7 @@ layout: single
 classes: wide
 author_profile: false
 comments: true
+excerpt: "Configuration delivery governance using Git-backed state, Ansible deployment, independent validation, negative-path testing, and operational evidence."
 categories:
   - projects
 tags:

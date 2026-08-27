@@ -3,15 +3,13 @@ layout: home
 author_profile: true
 ---
 
-# Infrastructure & Platform Engineering
-
 I design, automate, secure, operate, troubleshoot, recover, and migrate
 infrastructure and platform workloads across cloud-native, hybrid-cloud,
 and enterprise environments.
 
 My engineering focus spans the complete workload lifecycle:
 
-**architecture → cost → automation → security → deployment → operations → observability → reliability → recovery → migration**
+**Architecture → Cost → Automation → Security → Deployment → Operations → Observability → Reliability → Recovery → Migration**
 
 This site is a working engineering portfolio containing architecture decisions,
 implementations, operational controls, failure testing, runbooks, recovery
