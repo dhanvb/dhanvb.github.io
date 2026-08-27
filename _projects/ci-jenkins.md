@@ -2,6 +2,7 @@
 title: "Continuous Integration Using Jenkins, Nexus, SonarQube, Slack"
 layout: single
 comments: true
+excerpt: "Earlier CI implementation integrating Jenkins, Nexus, SonarQube, and Slack."
 categories:
   - projects
 tags:

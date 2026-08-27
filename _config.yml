@@ -1,98 +1,87 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: DHANVEER AHAMED ABDUL RAHEEM
+title: "Dhanveer Ahamed Abdul Raheem"
 email: dhanveerahamed@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Production-minded infrastructure and platform engineer focused on Kubernetes,
-  Linux, automation, reliability, migration, observability, and AI-assisted
-  operations.
+
+description: >-
+  Infrastructure and Platform Engineering portfolio covering DevOps,
+  DevSecOps, GitOps, Kubernetes and OpenShift, Azure and hybrid cloud,
+  automation, workload migration, reliability, cost engineering,
+  MLOps platform engineering, and AI-assisted operations.
+
 twitter_username: iamdhanveer
 github_username: dhanvb
-minimal_mistakes_skin: mint
+
+minimal_mistakes_skin: air
 search: true
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: Asia/Dubai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+# URL structure
+permalink: /:categories/:title/
+timezone: Asia/Dubai
+
+# Additional page directories
 include:
   - _pages
-  - _posts
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
+# Author profile
 author:
-  name   : "Dhanveer Ahamed Abdul Raheem"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Infrastructure & Platform Engineer focused on Kubernetes, Linux, automation, reliability, migration, and AI-assisted operations."
+  name: "Dhanveer Ahamed Abdul Raheem"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Senior Infrastructure & Platform Engineer"
+
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://dhanvb.github.io"
+
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/dhanvb"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:dhanveerahamed@gmail.com"
-    
-footer:
-  links:
-    #- label: "Twitter"
-    #  icon: "fab fa-fw fa-twitter-square"
-    #  url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/dhanvb"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:dhanveerahamed@gmail.com"
+
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/"
 
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:dhanveerahamed@gmail.com"
+
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/dhanvb"
+
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:dhanveerahamed@gmail.com"
+
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/"
+
+# Engineering project collection
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Default layouts
 defaults:
-  # _posts
+
+  # Engineering articles
   - scope:
       path: ""
       type: posts
@@ -104,7 +93,8 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
+
+  # Standard site pages
   - scope:
       path: "_pages"
       type: pages
@@ -112,23 +102,40 @@ defaults:
       layout: single
       author_profile: true
 
+  # Engineering project detail pages
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      classes: wide
+      author_profile: false
+      read_time: true
+      comments: true
+      share: true
+      related: false
+
+# Archives
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/
-  
+
+# Comments
 comments:
   provider: "giscus"
+
   giscus:
     repo: "dhanvb/dhanvb.github.io"
-    repo_id: "R_kgDONXDvRQ"                         
-    category: "General"                  
-    category_id: "DIC_kwDONXDvRc4Ckzq7"                 
-    mapping: "pathname"                        
-    reactions_enabled: true                    
-    emit_metadata: false                       
-    input_position: "bottom"                   
-    theme: "light"                             
-    lang: "en"                                 
+    repo_id: "R_kgDONXDvRQ"
+    category: "General"
+    category_id: "DIC_kwDONXDvRc4Ckzq7"
+    mapping: "pathname"
+    reactions_enabled: true
+    emit_metadata: false
+    input_position: "bottom"
+    theme: "light"
+    lang: "en"

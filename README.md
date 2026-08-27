@@ -1,22 +1,18 @@
 # Dhanveer Ahamed - Technical Portfolio
 
-This repository powers my GitHub Pages technical portfolio.
-
-The site contains practical infrastructure, DevOps, platform engineering, and reliability-focused articles and project write-ups based on hands-on implementation work.
+Infrastructure and Platform Architect focused on the architecture, automation, security, operation, reliability, cost governance, and migration of cloud-native and hybrid infrastructure.
 
 ## Portfolio Focus
 
-My work is focused on production-minded infrastructure and platform engineering, including:
-
-- Linux systems administration
-- Kubernetes operations
-- CI/CD workflows
-- Infrastructure automation
-- Configuration management
-- Ansible and Terraform
-- Observability and troubleshooting
-- Migration and recovery planning
-- AI-assisted operations and incident review
+- DevOps and delivery engineering
+- DevSecOps and security controls
+- Kubernetes and Red Hat OpenShift
+- Infrastructure as Code and configuration management
+- Workload and platform migration
+- Cloud cost governance and capacity engineering
+- Observability, incident response and recovery
+- MLOps platform and infrastructure foundations
+- AIOps and AI-assisted operations
 
 ## Current Positioning
 

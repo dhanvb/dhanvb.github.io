@@ -1,17 +1,12 @@
 main:
-  - title: "Posts"
+  - title: "Engineering Articles"
     url: /posts/
-    description: "Blog Posts"
+    description: "Architecture, operations, reliability and engineering articles"
+
   - title: "Projects"
     url: /projects/
-    external: false
-    description: "Real-Time Projects"
-  - title: "Categories"
-    url: /categories/
-    description: "Blog Categories"
-  - title: "Tags"
-    url: /tags/
-    description: "Blog Tags"
+    description: "Engineering implementations and work proofs"
+
   - title: "About"
     url: /about/
-    description: "About Me"
+    description: "Professional background and engineering focus"
