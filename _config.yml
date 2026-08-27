@@ -16,9 +16,10 @@
 title: DHANVEER AHAMED ABDUL RAHEEM
 email: dhanveerahamed@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Production-minded infrastructure and platform engineer focused on Kubernetes,
-  Linux, automation, reliability, migration, observability, and AI-assisted
-  operations.
+  Infrastructure and Platform Engineering portfolio covering DevOps,
+  DevSecOps, GitOps, Kubernetes and OpenShift, Azure and hybrid cloud,
+  automation, workload migration, reliability, cost engineering,
+  MLOps platform engineering, and AI-assisted operations.
 twitter_username: iamdhanveer
 github_username: dhanvb
 minimal_mistakes_skin: mint
@@ -61,7 +62,7 @@ plugins:
 author:
   name   : "Dhanveer Ahamed Abdul Raheem"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Infrastructure & Platform Engineer focused on Kubernetes, Linux, automation, reliability, migration, and AI-assisted operations."
+  bio    : "Senior Infrastructure & Platform Engineer | Architecture • Automation • Security • Reliability • Migration"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -99,7 +100,7 @@ defaults:
     values:
       layout: single
       classes: wide
-      author_profile: false
+      author_profile: true
       read_time: true
       comments: true
       share: true
@@ -110,6 +111,7 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: wide
       author_profile: true
 
 category_archive:
