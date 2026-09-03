@@ -2,7 +2,7 @@
 
 layout: home
 author_profile: true
---------------------
+---
 
 # Infrastructure & Platform Engineering
 
