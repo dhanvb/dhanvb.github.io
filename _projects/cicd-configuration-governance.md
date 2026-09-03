@@ -1,6 +1,6 @@
 ---
 title: "CI/CD Configuration Governance with Ansible Validation Gates"
-date: 2026-08-24
+date: 2026-09-03
 layout: single
 classes: wide
 author_profile: false
@@ -24,7 +24,7 @@ The goal is to deploy a Git-backed application configuration file using Ansible 
 
 Repository:
 
-[GitHub Repository](https://github.com/dhanvb/cicd-configuration-governance-lab)
+[GitHub Repository](https://github.com/dhanvb/cicd-configuration-governance)
 
 ---
 

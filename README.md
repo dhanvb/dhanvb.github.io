@@ -32,23 +32,32 @@ The site is organized into:
 
 ## Featured Work
 
-### CI/CD Configuration Governance with Ansible Validation Gates
+### CI/CD Configuration Governance
 
-A production-style reference implementation for version-controlled configuration deployment, validation gates, failure evidence, and AI-assisted change review.
+A reference implementation of a configuration-governance control that separates candidate approval, deployment execution, and post-deployment verification.
+
+The workflow uses Git-backed configuration, independent release policy, Ansible, GitHub Actions, negative-path testing, and deployment evidence.
 
 Repository:
 
-https://github.com/dhanvb/cicd-configuration-governance-lab
+https://github.com/dhanvb/cicd-configuration-governance
+
+Engineering article:
+
+https://dhanvb.github.io/posts/cicd-configuration-governance-ansible-validation/
 
 This project demonstrates:
 
-- Git-backed configuration management
-- Ansible-based deployment
-- validation gates
-- failure simulation
-- evidence logging
-- AI-assisted configuration review direction
-- human approval boundaries for production changes
+* Git-backed configuration management
+* independent release policy
+* pre-deployment rejection of unapproved configuration
+* Ansible-based deployment
+* post-deployment version verification
+* SHA-256 configuration integrity verification
+* negative-path testing
+* GitHub Actions CI enforcement
+* explicit governance ownership through CODEOWNERS
+* AI-assisted configuration review with human approval boundaries
 
 ## Site Technology
 

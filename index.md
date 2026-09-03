@@ -1,109 +1,105 @@
 ---
+
 layout: home
 author_profile: true
+--------------------
+
+# Infrastructure & Platform Engineering
+
+Accomplished Professional in IT Infrastructure, Platform, Operational Management with more than 18+ years of experience across Enterprise datacenter operations, Linux and Unix systems, Virtualization, Container Orchestration, Private and Public Cloud platforms, Automation, CI/CD, GitOps, API Infrastructure, Reliability, Recovery, Systems Upgradation, Workload Migration like On Prem to Cloud.
+
+I focus on designing and operating infrastructure that can be automated, secured, observed, recovered, upgraded, and governed throughout its lifecycle.
+
 ---
 
-I design, automate, secure, operate, troubleshoot, recover, and migrate
-infrastructure and platform workloads across cloud-native, hybrid-cloud,
-and enterprise environments.
+## What I Can Help an Organization With
 
-My engineering focus spans the complete workload lifecycle:
+### Platform Engineering
 
-**Architecture → Cost → Automation → Security → Deployment → Operations → Observability → Reliability → Recovery → Migration**
+Designing and operating Kubernetes and OpenShift platforms, workload lifecycle management, ingress, networking, persistent storage, identity integration, security boundaries, upgrades, observability, backup, and operational tooling.
 
-This site is a working engineering portfolio containing architecture decisions,
-implementations, operational controls, failure testing, runbooks, recovery
-procedures, and engineering trade-offs.
+### DevOps, CI/CD & GitOps
 
-## Engineering Focus
+Building safer delivery workflows using CI/CD, GitOps, deployment automation, release controls, configuration governance, validation gates, failure testing, and environment lifecycle management.
 
-### DevOps & GitOps
+### Infrastructure Automation
 
-Delivery architecture, configuration governance, deployment safety,
-infrastructure automation, release controls, GitOps operating models,
-and environment lifecycle management.
+Reducing manual operational work using Ansible, scripting, Infrastructure as Code using Terraform, reusable deployment workflows, configuration management, and operational automation.
 
-### DevSecOps
+### Infrastructure Reliability & Operations
 
-Security controls integrated into delivery workflows, vulnerability management,
-policy enforcement, secrets boundaries, configuration integrity, and
-software-supply-chain controls.
-
-### Kubernetes & Red Hat OpenShift
-
-Cluster and workload architecture, GitOps, storage, networking, ingress,
-security boundaries, observability, reliability, upgrades, incident response,
-and workload lifecycle operations.
+Monitoring, alerting, incident troubleshooting, capacity management, backup and recovery, disaster-recovery planning, failure analysis, operational runbooks, and service continuity.
 
 ### Cloud & Workload Migration
 
-Azure and hybrid-cloud architecture, workload discovery, dependency analysis,
-migration planning, cutover, rollback, validation, and post-migration operations.
+Infrastructure discovery, dependency analysis, migration architecture, workload movement, cutover planning, rollback strategy, validation, and post-migration operations across cloud and hybrid environments.
 
-### Cost & Capacity Engineering
+### Infrastructure Security & Governance
 
-Resource utilization, cloud cost visibility, capacity planning, workload sizing,
-cost-aware architecture decisions, and reliability versus cost trade-offs.
+Access controls, configuration integrity, secrets boundaries, deployment safeguards, vulnerability remediation, operational evidence, and infrastructure change governance.
 
-### MLOps Platform Engineering
+### AI Infrastructure & AI-Assisted Operations
 
-Infrastructure and platform foundations for AI/ML workloads including
-deployment automation, model-serving infrastructure, workload isolation,
-observability, reliability, governance, and cost management.
-
-### AIOps & AI-Assisted Operations
-
-Applying AI to operational workflows such as change analysis, incident
-triage, log correlation, configuration review, and decision support while
-preserving explicit human control over consequential actions.
+Platform Engineering for GPU-backed workloads, AI/ML platform infrastructure, model-serving environments, GitOps-driven AI infrastructure, observability, capacity, reliability, and AI-assisted operational workflows.
 
 ---
 
-## What This Portfolio Is Intended to Demonstrate
+## Engineering Articles
 
-The objective is not to show that I can install individual tools.
+I document architecture decisions, operational problems, implementation patterns, failure scenarios, troubleshooting, reliability controls, migration approaches, and lessons from real world scenarios.
 
-The engineering work here focuses on:
-
-- why a system or operational control is needed
-- architecture and ownership boundaries
-- implementation and automation
-- security and cost implications
-- failure behaviour
-- observability and incident response
-- recovery and rollback
-- validation and evidence
-- engineering trade-offs
-
-The common theme is **end-to-end engineering ownership**.
+[View all Engineering Articles →](/posts/)
 
 ---
 
-## Featured Engineering Work
+## Engineering Projects
 
-### CI/CD Configuration Governance
+The project section contains implementation-backed case studies rather than tool installation demonstrations.
 
-A deployment control that separates successful automation from acceptance
-of the resulting configuration state.
+Project Documentation contains:
 
-The implementation uses Git-backed configuration, Ansible deployment,
-independent validation, negative-path testing, and operational evidence.
+* Real World Planning, Architecture, Design, Implementation, Operational Problems,
+* Architectural planning, Design decisions based on my observation and experience,
+* Field-Tested and Repeatable implementation methodologies,
+* Possible failure behaviour, associated risks and its mitigation,
+* Validation and Evidences,
+* Long run production and operational considerations, Completed Lifecycle Management and
+* the relevant GitHub repository.
 
-[Read the engineering article](/posts/cicd-configuration-governance-ansible-validation/)
-
-[View the implementation on GitHub](https://github.com/dhanvb/cicd-configuration-governance-lab)
+[View all Engineering Projects →](/projects/)
 
 ---
 
-## Current Engineering Directions
+## Current Engineering Direction
 
-This portfolio is continuously expanding across:
+I am continuing to extend my enterprise infrastructure background into:
 
-- Kubernetes and OpenShift platform operations
-- DevSecOps and delivery security
-- GitOps and multi-cluster operations
-- Azure workload migration
-- cloud cost engineering
-- infrastructure reliability and disaster recovery
-- MLOps platform engineering
-- AIOps and AI-assisted infrastructure operations
+* Platform engineering and GitOps operating models
+* Kubernetes and OpenShift architecture
+* Infrastructure and Application delivery governance
+* DevSecOps and software-supply-chain controls
+* Cloud migration and Cost engineering
+* Infrastructure reliability and disaster recovery
+* AI/ML infrastructure and model-serving platforms
+* AI-assisted infrastructure operations and agentic operational workflows
+
+The technology continues to change.
+
+The underlying engineering responsibilities do not:
+
+**Understand the system → Automate it → Secure it → Operate it → Observe it → Recover it → Improve it**
+
+---
+
+## Explore
+
+[About My Experience →](/about/)
+
+[Engineering Articles →](/posts/)
+
+[Engineering Projects →](/projects/)
+
+[GitHub →](https://github.com/dhanvb)
+
+[LinkedIn →](https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/)
+

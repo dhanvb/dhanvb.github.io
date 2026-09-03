@@ -6,7 +6,7 @@ author_profile: true
 
 # Engineering Profile
 
-I am a senior infrastructure and platform engineer with more than 17 years
+I am a Senior Infrastructure and Platform professional with more than 18+ years
 of experience across enterprise infrastructure, Linux and Unix systems,
 virtualization, cloud platforms, automation, container platforms,
 production operations, and workload migration.
@@ -23,7 +23,7 @@ how they are recovered, and how they are operated safely and economically.
 
 I approach infrastructure as a lifecycle rather than a collection of tools:
 
-**architecture → capacity and cost → build → security → deployment → operations → observability → incident response → recovery → migration**
+**Architecture → Capacity and Cost → Build → Security → Deployment → Operations → Observability → Incident response → Recovery → Migration**
 
 A technically successful deployment is not sufficient if the resulting system
 cannot be operated, secured, observed, recovered, upgraded, or economically
@@ -36,24 +36,24 @@ documented in this portfolio.
 
 My professional experience includes:
 
-- enterprise Linux, Unix and Windows infrastructure
+- Enterprise Linux, Unix and Windows infrastructure
 - VMware and virtualization platforms
 - Kubernetes, AKS and Red Hat OpenShift
 - Azure and hybrid-cloud environments
 - Terraform, Ansible, Puppet and infrastructure automation
 - Jenkins, GitLab CI and Azure DevOps delivery workflows
 - DevSecOps controls and container security
-- observability, monitoring and incident response
-- disaster recovery, backup and service continuity
-- infrastructure and workload migration
-- capacity planning and cloud cost optimization
-- production change, incident and operational management
+- Observability, monitoring and incident response
+- Disaster recovery, backup and service continuity
+- Infrastructure and workload migration
+- Capacity planning and cloud cost optimization
+- Production change, incident and operational management
 
 ## Current Engineering Focus
 
 I am continuing to extend this infrastructure foundation into:
 
-- platform engineering and GitOps operating models
+- Platform engineering and GitOps operating models
 - DevSecOps and software-supply-chain controls
 - Kubernetes and OpenShift platform architecture
 - Azure migration and cloud cost engineering
@@ -71,16 +71,16 @@ This site is not intended to reproduce my résumé.
 
 It is a collection of engineering work proofs that document:
 
-- architecture decisions
-- automation
-- implementation
-- operational controls
-- failure paths
-- runbooks
-- troubleshooting
-- recovery
-- security and cost considerations
-- lessons and trade-offs
+- Architecture decisions
+- Automation
+- Implementation
+- Operational controls
+- Failure paths
+- Runbooks
+- Troubleshooting
+- Recovery
+- Security and cost considerations
+- Lessons and trade-offs
 
 Where an implementation is a reference implementation rather than a system
 operated in a customer production environment, it is described accordingly.

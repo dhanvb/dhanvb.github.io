@@ -1,6 +1,6 @@
 ---
 title: "CI/CD Configuration Governance with Ansible Validation Gates"
-date: 2026-08-24
+date: 2026-09-03
 layout: single
 classes: wide
 author_profile: false
@@ -27,7 +27,7 @@ This article explains a production-style configuration governance workflow using
 
 Repository:
 
-[CI/CD Configuration Governance Lab](https://github.com/dhanvb/cicd-configuration-governance-lab)
+[CI/CD Configuration Governance](https://github.com/dhanvb/cicd-configuration-governance)
 
 ---
 

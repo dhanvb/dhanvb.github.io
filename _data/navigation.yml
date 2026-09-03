@@ -1,5 +1,5 @@
 main:
-  - title: "Engineering Articles"
+  - title: "Articles"
     url: /posts/
     description: "Architecture, operations, reliability and engineering articles"
 
