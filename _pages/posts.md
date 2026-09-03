@@ -4,7 +4,7 @@ title: "Engineering Articles"
 permalink: /posts/
 layout: single
 author_profile: true
---------------------
+---
 
 These articles document engineering decisions, implementation patterns, failure modes, operational controls, troubleshooting, and lessons from infrastructure and platform engineering work.
 

@@ -10,8 +10,6 @@ Accomplished Professional in IT Infrastructure Management, Platform Engineering,
 
 I focus on designing and operating infrastructure that can be automated, secured, observed, recovered, upgraded, and governed throughout its lifecycle.
 
----
-
 ## What I Can Help an Organization With
 
 ### Platform Engineering
