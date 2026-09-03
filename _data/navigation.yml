@@ -1,0 +1,12 @@
+main:
+  - title: "Articles"
+    url: /posts/
+    description: "Architecture, operations, reliability and engineering articles"
+
+  - title: "Projects"
+    url: /projects/
+    description: "Engineering implementations and work proofs"
+
+  - title: "About"
+    url: /about/
+    description: "Professional background and engineering focus"
