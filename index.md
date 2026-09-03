@@ -4,9 +4,9 @@ layout: home
 author_profile: true
 ---
 
-# Infrastructure & Platform Engineering
+## Infrastructure & Platform Engineering
 
-Accomplished Professional in IT Infrastructure, Platform, Operational Management with more than 18+ years of experience across Enterprise datacenter operations, Linux and Unix systems, Virtualization, Container Orchestration, Private and Public Cloud platforms, Automation, CI/CD, GitOps, API Infrastructure, Reliability, Recovery, Systems Upgradation, Workload Migration like On Prem to Cloud.
+Accomplished Professional in IT Infrastructure Management, Platform Engineering, Operational Management with more than 18+ years of experience across Enterprise Datacenter Operations, Linux and Unix systems, Virtualization, Container Orchestration, Private and Public Cloud platforms, Automation, CI/CD, GitOps, API Infrastructure, Reliability, Disaster Recovery, Backup and Restore Management, Systems Upgradation, Workload Migration like On Prem to Cloud.
 
 I focus on designing and operating infrastructure that can be automated, secured, observed, recovered, upgraded, and governed throughout its lifecycle.
 
