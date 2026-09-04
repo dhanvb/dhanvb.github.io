@@ -1,6 +1,7 @@
 ---
 
-layout: home
+layout: single
+title: false
 author_profile: true
 ---
 
