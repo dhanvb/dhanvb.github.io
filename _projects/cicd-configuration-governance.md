@@ -1,22 +1,21 @@
 ---
 
 title: "CI/CD Configuration Governance with Ansible Validation Gates"
-date: 2026-09-04
+date: 2026-09-07
 layout: single
 classes: wide
 author_profile: false
 comments: true
 excerpt: "A reference implementation for rejecting unapproved configuration before deployment, verifying deployed state with Ansible and SHA-256 checks, and capturing governance evidence."
 categories:
-
-* projects
-  tags:
-* Ansible
-* CI/CD
-* Platform Engineering
-* Configuration Management
-* DevOps
-* Configuration Governance
+  - projects
+tags:
+  - Ansible
+  - CI/CD
+  - Platform Engineering
+  - Configuration Management
+  - DevOps
+  - Configuration Governance
 
 ---
 

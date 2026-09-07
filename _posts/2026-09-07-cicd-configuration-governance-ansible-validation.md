@@ -1,24 +1,22 @@
 ---
 
 title: "CI/CD Configuration Governance with Ansible Validation Gates"
-date: 2026-09-12
+date: 2026-09-07
 layout: single
 classes: wide
 author_profile: false
 comments: true
 categories:
-
-* posts
-  tags:
-* Ansible
-* CI/CD
-* Configuration Management
-* Platform Engineering
-* DevOps
-* Validation Gates
-* Configuration Governance
-* AI-Assisted Operations
-
+  - posts
+tags:
+  - Ansible
+  - CI/CD
+  - Configuration Management
+  - Platform Engineering
+  - DevOps
+  - Validation Gates
+  - Configuration Governance
+  - AI-Assisted Operations
 ---
 
 ## Overview
