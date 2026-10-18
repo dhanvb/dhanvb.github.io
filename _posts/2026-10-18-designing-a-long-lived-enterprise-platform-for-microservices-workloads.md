@@ -228,14 +228,4 @@ The architecture therefore needs to distinguish between three things:
 
 For example:
 
-```text
-Application
-    |
-    v
-Platform Contract
-    |
-    v
-Platform Capability
-    |
-    v
-Implementation Component
+![ArchitectureContracts](../assets/images/01-architecture-contracts.svg)
