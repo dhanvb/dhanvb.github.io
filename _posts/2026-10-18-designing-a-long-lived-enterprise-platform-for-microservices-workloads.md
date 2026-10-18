@@ -228,4 +228,4 @@ The architecture therefore needs to distinguish between three things:
 
 For example:
 
-![ArchitectureContracts](../assets/images/01-architecture-contracts.png)
+![Platform Architecture Contracts]({{ '/assets/images/01-architecture-contracts.svg' | relative_url }})
