@@ -417,6 +417,11 @@ These capabilities require future implementation and runtime evidence.
 
 They are not claimed as completed by the A03 validation workflow.
 
+
+#### Technical Article
+
+[Designing an Application Onboarding Contract Between Developers and Platform Engineering]({{ '/posts/designing-an-application-onboarding-contract/' | relative_url }})
+
 ---
 
 ## Future Architecture Scope
