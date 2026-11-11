@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Platform Reference Architecture"
 date: 2026-10-11
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-12
 layout: single
 classes: wide
 author_profile: false
@@ -424,6 +424,176 @@ They are not claimed as completed by the A03 validation workflow.
 
 ---
 
+### A04: Policy-Based Platform Consumption, Capacity Admission and Resource Governance
+
+**Status: Architecture documented; A04 static CI validation passed. Production reservation and enforcement remain unimplemented.**
+
+The fourth architecture milestone extends the A03 Application Onboarding Contract by addressing a different engineering problem:
+
+**How can an enterprise platform determine whether an application is entitled to consume resources, whether the requested capacity is available, and whether that capacity can be safely allocated?**
+
+A03 established how application teams declare requirements through a standardized, versioned contract.
+
+A04 examines what happens after those requirements have been declared.
+
+A valid application contract does not establish that:
+
+- The requesting team has sufficient resource entitlement.
+- The target environment has available capacity.
+- The submitted request has been authorized.
+- Resources have been reserved.
+- The runtime will successfully enforce the requested configuration.
+
+These are separate decisions requiring different platform capabilities.
+
+#### Capacity Consumption Model
+
+A04 establishes a normalized resource-demand model for application workloads.
+
+The model calculates CPU and memory requirements based on the declared number of replicas, while evaluating persistent storage according to the total capacity requested in the A03 contract.
+
+Resource quantities are represented using exact integer units rather than approximate floating-point calculations.
+
+The architecture distinguishes:
+
+| Resource Concept | Meaning |
+|---|---|
+| Declared Demand | Resources requested through the onboarding contract |
+| Entitlement | Resources a verified team is permitted to reserve |
+| Available Capacity | Resources remaining in the target environment after accounting for existing commitments and reservations |
+| Committed Allocation | Resources recorded by an authoritative reservation mechanism |
+| Runtime Configuration | Resource requests, limits and controls actually applied |
+| Observed Usage | Resources consumed over a measured interval |
+
+**A capacity-eligible request is not an authorized deployment or a committed reservation.**
+
+This distinction is central to the architecture.
+
+#### Independent Entitlement and Capacity Evaluation
+
+The proposed model evaluates two independent constraints.
+
+**Team entitlement:** Does the request fit within the remaining resources allocated to the requesting team?
+
+**Environment headroom:** Does the target environment have sufficient uncommitted capacity after accounting for platform reservations, safety headroom and existing workloads?
+
+Both constraints must be satisfied.
+
+The reference evaluator produces deterministic advisory decisions explaining whether a request is eligible or denied and which capacity constraints caused a denial.
+
+The model also documents the additional requirements for production integration, including trusted ownership, fresh capacity data, independent authorization, atomic reservation, concurrency protection and idempotent updates.
+
+#### Architecture Decisions
+
+Two new Architecture Decision Records establish the principal design choices.
+
+**ADR-006: Independent Entitlements and Capacity Admission**
+
+Selects a two-level capacity assessment model instead of relying solely on namespace quotas, physical headroom or unrestricted first-come resource allocation.
+
+**ADR-007: Separate Commitments, Runtime Configuration and Usage for Showback**
+
+Separates declared requirements, accepted allocations, enforced configuration and measured consumption.
+
+This establishes a foundation for future cost attribution and showback without presenting unmeasured consumption as an established financial result.
+
+#### Executable Reference Implementation
+
+A04 includes an offline Python evaluator that consumes the existing A03 application declaration and a separate capacity snapshot.
+
+The evaluator:
+
+- Validates the A03 declaration against its canonical JSON Schema.
+- Validates the capacity snapshot.
+- Normalizes CPU and memory quantities.
+- Calculates aggregate workload demand.
+- Checks resource entitlement and environment headroom.
+- Produces a versioned decision with explicit reason codes.
+- Records the declaration digest, revision, policy version and snapshot identity.
+
+The reference example includes an eligible production workload requiring 500 millicores of CPU and 512 MiB of memory.
+
+A negative scenario increases CPU demand to 6000 millicores, exceeding both the team's 2000-millicore headroom and the environment's 5000-millicore headroom.
+
+The evaluator consequently returns a denial with separate reasons for each exceeded constraint.
+
+The examples use synthetic capacity data. They are not measurements of a live enterprise environment.
+
+#### Static Validation and CI
+
+The A04 evidence package includes JSON Schemas, positive and negative example decisions, Python unit tests, repository validation checks, an editable Graphviz diagram, requirement traceability and an architectural risk register.
+
+The A04 GitHub Actions workflow successfully executed on November 11, 2026 UTC, against commit `9d79280b6df8f9b376d760d4d9d0942846be6aeb`.
+
+The successful workflow includes:
+
+- A03 contract regression validation
+- A04 evaluator and decision tests
+- A02, A03 and A04 repository consistency checks
+- Graphviz diagram rendering
+- Whitespace validation within the A04 workflow
+
+**[View Successful A04 GitHub Actions Run #1](https://github.com/dhanvb/enterprise-platform-reference-architecture/actions/runs/43100393538)**
+
+**[View Validated Commit](https://github.com/dhanvb/enterprise-platform-reference-architecture/commit/9d79280b6df8f9b376d760d4d9d0942846be6aeb)**
+
+The separately triggered A03 workflow at this revision reported trailing-whitespace errors in newly added Markdown. Its contract, architecture and regression tests passed, but its overall workflow result was unsuccessful. That formatting issue is tracked separately and is not represented as a fully passing repository-wide CI baseline.
+
+#### Repository Evidence
+
+| Artifact | Purpose |
+|---|---|
+| [ARC-008: Platform Consumption Architecture](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/architecture/08-platform-consumption-model.md) | Defines the resource governance model and architecture requirements |
+| [HLD-003: Platform Consumption](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/hld/HLD-003-platform-consumption.md) | Documents logical components, data flow and trust boundaries |
+| [Capacity Admission Diagram](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/assets/diagrams/svg/05-consumption-admission.svg) | Illustrates eligibility, authorization and future reservation boundaries |
+| [ADR-006](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/adr/ADR-006-capacity-admission.md) | Records the capacity-admission decision |
+| [ADR-007](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/adr/ADR-007-consumption-accounting.md) | Defines consumption accounting and showback boundaries |
+| [Capacity Snapshot Schema](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/contracts/consumption/capacity-snapshot.schema.json) | Defines resource entitlements and environment capacity inputs |
+| [Capacity Decision Schema](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/contracts/consumption/decision.schema.json) | Defines the advisory evaluation result |
+| [Python Evaluator](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/contracts/consumption/evaluate.py) | Implements resource normalization and capacity checks |
+| [Evaluator Tests](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/contracts/consumption/test_consumption.py) | Verifies calculation, decision and rejection scenarios |
+| [Requirements Traceability](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/decisions/consumption-traceability.csv) | Maps architecture requirements to evidence |
+| [Risk Register](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/docs/decisions/consumption-risk-register.csv) | Identifies capacity and governance risks |
+| [Validation Report](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/validation/reports/A04-validation.md) | Records the static validation scope, results and limitations |
+| [A04 Evidence Index](https://github.com/dhanvb/enterprise-platform-reference-architecture/blob/main/evidence/A04.md) | Consolidates the architecture evidence |
+
+#### What A04 Demonstrates
+
+This milestone demonstrates the ability to:
+
+1. Translate application resource declarations into deterministic capacity requirements.
+2. Design entitlement governance independently from infrastructure availability.
+3. Explain capacity admission decisions through machine-readable contracts.
+4. Separate eligibility, authorization, reservation and runtime enforcement.
+5. Define architectural requirements for concurrency-safe resource allocation.
+6. Distinguish committed capacity from actual resource consumption.
+7. Implement and validate a representative platform-policy evaluator.
+8. Document risks, architectural decisions, verification methods and implementation boundaries.
+
+#### Evidence Limitations
+
+A04 provides architectural and static-validation evidence.
+
+It does not demonstrate:
+
+- Authenticated team entitlement retrieval
+- Trusted or continuously refreshed capacity snapshots
+- Atomic resource reservations
+- Concurrent allocation protection
+- Idempotent production provisioning
+- Kubernetes runtime quota enforcement
+- Live utilization metering
+- Actual cost savings or financial chargeback
+- Production availability or service-level guarantees
+
+These capabilities require separate implementation and operational evidence.
+
+#### Technical Article
+
+[Designing Capacity Admission and Resource Governance for Enterprise Platforms]({{ '/posts/policy-based-platform-consumption-and-capacity-admission/' | relative_url }})
+
+---
+
 ## Future Architecture Scope
 
 The reference architecture will continue to evolve through additional technical milestones.
@@ -436,7 +606,7 @@ Planned subjects include:
 - Observability, service-level objectives and incident response
 - Platform operations, auditability and lifecycle management
 
-These topics will build on the foundations established by A01, A02 and A03.
+These topics build on the architectural foundations established by A01 through A04, including platform capabilities, onboarding contracts, resource-consumption governance and traceable architecture decisions.
 
 The objective is to develop a connected body of architecture, implementation and operational evidence rather than isolated demonstrations of individual tools.
 
@@ -449,7 +619,7 @@ The architecture milestones completed so far demonstrate:
 1. **Enterprise platform design:** Establishing platform boundaries and long-lived capabilities independently of individual products.
 2. **Requirements engineering:** Translating platform needs into documented requirements, contracts and acceptance criteria.
 3. **Architectural decision-making:** Comparing alternatives and recording rationale, consequences and trade-offs.
-4. **Platform consumption design:** Defining how development teams request and consume shared platform capabilities.
+4. **Platform consumption and capacity governance:** Defining how application teams request platform capabilities, how resource demand is evaluated against entitlements and infrastructure headroom, and why eligibility must remain separate from authorization and committed allocation.
 5. **Security architecture:** Separating tenant isolation, policy evaluation, authorization and runtime enforcement concerns.
 6. **Traceability and governance:** Connecting requirements to decisions, risks, verification methods and evidence.
 7. **Automation and validation:** Building executable static checks and integrating them into GitHub Actions.
