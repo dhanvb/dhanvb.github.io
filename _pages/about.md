@@ -1,10 +1,8 @@
 ---
-title: "About"
+title: "About My Engineering Journey"
 permalink: /about/
 author_profile: true
 ---
-
-# About My Engineering Journey
 
 ## From Enterprise Infrastructure to End-to-End Platform Engineering
 
