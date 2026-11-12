@@ -1,37 +1,26 @@
-# Dhanveer Ahamed - Technical Portfolio
+# Infrastructure & Platform Engineering
 
-Infrastructure and Platform Architect focused on the architecture, automation, security, operation, reliability, cost governance, and migration of cloud-native and hybrid infrastructure.
+**Architect. Implement. Operate.**
 
-## Portfolio Focus
+Senior infrastructure and platform engineering professional with 18+ years of experience across enterprise infrastructure, Linux, Windows, virtualization, cloud platforms, Kubernetes, OpenShift, DevOps, GitOps, automation, and production operations.
 
-- DevOps and delivery engineering
-- DevSecOps and security controls
-- Kubernetes and Red Hat OpenShift
-- Infrastructure as Code and configuration management
-- Workload and platform migration
-- Cloud cost governance and capacity engineering
-- Observability, incident response and recovery
-- MLOps platform and infrastructure foundations
-- AIOps and AI-assisted operations
+I focus on the complete infrastructure lifecycle: understanding workload requirements, designing the architecture, implementing reliable platforms, and establishing the operational controls needed to maintain them.
 
-## Current Positioning
+### Engineering Focus
 
-I am an infrastructure and platform engineer focused on building, operating, documenting, and improving reliable systems.
+- **Architecture:** Platform capabilities, system design, security, reliability, capacity, and cost
+- **Implementation:** Kubernetes, cloud infrastructure, automation, CI/CD, GitOps, and deployment validation
+- **Operations:** Monitoring, incident response, troubleshooting, upgrades, backup, and recovery
+- **Emerging Workloads:** Developing infrastructure expertise in AI/ML, MLOps, GPU platforms, and blockchain systems
 
-My goal is to show practical engineering judgment through real implementation work, not just tool installation tutorials.
+### Engineering Evidence
 
-## Content Structure
+My repositories document architecture decisions, implementation approaches, automated tests, validation results, operational considerations, and known limitations.
 
-The site is organized into:
+**Featured project:** [Enterprise Platform Reference Architecture](https://github.com/dhanvb/enterprise-platform-reference-architecture)
 
-- **Posts**: technical articles, implementation notes, and operational write-ups
-- **Projects**: portfolio projects and case studies
-- **Categories**: grouped technical topics
-- **Tags**: technology-specific indexing
-- **About**: professional background and experience summary
+**Engineering Portfolio:** https://dhanvb.github.io
 
-Infrastructure & Platform Engineer focused on Kubernetes, Linux, automation, reliability, migration, and AI-assisted operations.
+**Technical Articles:** https://dhanvb.github.io/posts/
 
-- GitHub: https://github.com/dhanvb
-- Portfolio: https://dhanvb.github.io
-- LinkedIn: https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/
+**LinkedIn:** https://www.linkedin.com/in/dhanveer-ahamed-abdul-raheem-27555958/

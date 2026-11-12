@@ -3,10 +3,10 @@ title: "Dhanveer Ahamed Abdul Raheem"
 email: dhanveerahamed@gmail.com
 
 description: >-
-  Infrastructure and Platform Engineering portfolio covering DevOps,
-  DevSecOps, GitOps, Kubernetes and OpenShift, Azure and hybrid cloud,
-  automation, workload migration, reliability, cost engineering,
-  MLOps platform engineering, and AI-assisted operations.
+  Infrastructure and Platform Engineering portfolio covering
+  architecture, implementation and operations across enterprise
+  infrastructure, cloud, Kubernetes, DevOps, GitOps and reliability.
+  Expanding into AI/ML, MLOps and blockchain infrastructure.
 
 twitter_username: iamdhanveer
 github_username: dhanvb
@@ -38,7 +38,7 @@ plugins:
 author:
   name: "Dhanveer Ahamed Abdul Raheem"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Senior Infrastructure & Platform Engineer"
+  bio: "Infrastructure & Platform Engineering | Architect. Implement. Operate."
 
   links:
     - label: "Website"
